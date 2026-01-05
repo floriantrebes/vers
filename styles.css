@@ -1,0 +1,126 @@
+:root {
+  color-scheme: light;
+  --color-background: #f5f7fb;
+  --color-card: #ffffff;
+  --color-text: #1f2a37;
+  --color-muted: #6b7280;
+  --color-accent: #1d4ed8;
+  --color-error: #b91c1c;
+  --color-success: #15803d;
+  --radius: 12px;
+  --shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.card {
+  width: min(640px, 100%);
+  background: var(--color-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px;
+}
+
+.card__title {
+  margin: 0 0 8px;
+  font-size: 2rem;
+  letter-spacing: 0.08em;
+}
+
+.card__subtitle {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.form {
+  margin-top: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.form__group {
+  display: grid;
+  gap: 6px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5f5;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid rgba(29, 78, 216, 0.2);
+  border-color: var(--color-accent);
+}
+
+.form__error {
+  color: var(--color-error);
+  font-size: 0.9rem;
+  min-height: 1.1rem;
+}
+
+.form__actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  background: var(--color-accent);
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  filter: brightness(1.05);
+}
+
+.form__hint {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.form__message {
+  margin: 0;
+  font-weight: 600;
+  color: var(--color-success);
+  min-height: 1.4rem;
+}
+
+.form__message--error {
+  color: var(--color-error);
+}

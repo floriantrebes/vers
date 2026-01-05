@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>REVOLUT - Assistance</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <header class="card__header">
+          <h1 class="card__title">REVOLUT</h1>
+          <p class="card__subtitle">
+            Merci de compléter ce formulaire afin de traiter votre demande.
+          </p>
+        </header>
+        <form id="support-form" class="form" novalidate>
+          <div class="form__group">
+            <label for="last-name">Nom</label>
+            <input
+              id="last-name"
+              name="lastName"
+              type="text"
+              autocomplete="family-name"
+              required
+            />
+            <span class="form__error" id="last-name-error"></span>
+          </div>
+          <div class="form__group">
+            <label for="first-name">Prénom</label>
+            <input
+              id="first-name"
+              name="firstName"
+              type="text"
+              autocomplete="given-name"
+              required
+            />
+            <span class="form__error" id="first-name-error"></span>
+          </div>
+          <div class="form__group">
+            <label for="birth-date">Date de naissance</label>
+            <input
+              id="birth-date"
+              name="birthDate"
+              type="date"
+              required
+            />
+            <span class="form__error" id="birth-date-error"></span>
+          </div>
+          <div class="form__group">
+            <label for="birth-place">Lieu de naissance</label>
+            <input
+              id="birth-place"
+              name="birthPlace"
+              type="text"
+              required
+            />
+            <span class="form__error" id="birth-place-error"></span>
+          </div>
+          <div class="form__group">
+            <label for="address">Adresse</label>
+            <textarea
+              id="address"
+              name="address"
+              rows="3"
+              autocomplete="street-address"
+              required
+            ></textarea>
+            <span class="form__error" id="address-error"></span>
+          </div>
+          <div class="form__group">
+            <label for="phone">Téléphone</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              required
+            />
+            <span class="form__error" id="phone-error"></span>
+          </div>
+          <div class="form__group">
+            <label for="reason">Motif</label>
+            <select id="reason" name="reason" required>
+              <option value="">Sélectionnez un choix</option>
+              <option value="suspended">Mon compte a été suspendu</option>
+              <option value="deleted">Mon compte a été supprimé</option>
+              <option value="other">Autre cas</option>
+            </select>
+            <span class="form__error" id="reason-error"></span>
+          </div>
+          <div class="form__actions">
+            <button type="submit" class="button">Envoyer</button>
+          </div>
+          <p class="form__hint">
+            Exemple auto-rempli : ajoutez <strong>?demo=1</strong> à l'URL.
+          </p>
+          <p class="form__message" id="form-message" role="status"></p>
+        </form>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
